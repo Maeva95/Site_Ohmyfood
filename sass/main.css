@@ -58,12 +58,12 @@
     font-size: 16px;
     padding: 13px 0;
     margin: 20px 0;
-    background-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: #fff;
     width: 218px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     border: 0;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   }
   button:hover {
     background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
@@ -126,5 +126,157 @@
   }
   .operation {
     background: #fff;
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  .step {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  .step__detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #F6F6F6;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    gap: 20px;
+    margin: 0px 0px 0px 10px;
+    list-style: none;
+    padding: 10px 40px;
+    position: relative;
+    width: 100%;
+  }
+  .step__detail .fa-store {
+    color: #9356DC;
+  }
+  .step__order {
+    background: #9356DC;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #fff;
+    position: absolute;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    padding: 54px 18px 66px 17px;
+    gap: 20px;
+  }
+  .restaurants__title {
+    padding-left: 3px;
+  }
+  .restaurants__card {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    box-sizing: border-box;
+  }
+  .restaurants__card a {
+    text-decoration: none;
+    color: #000000;
+    width: 100%;
+    height: 251px;
+    box-sizing: border-box;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 251px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .card__image {
+    height: 70%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .card__image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+  }
+  .card__image .box-new {
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    padding: 10px;
+    background-color: #99E2D0;
+    color: #008766;
+    border-radius: 2px;
+  }
+  .card__content {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 25px 12px 13px;
+  }
+  .card__content .card-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .card__content .card-txt .card-title {
+    margin: 0;
+  }
+  .card__content .card-txt .card-place {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 300;
+  }
+  /**like**/
+  #like-fav {
+    position: absolute;
+    left: 270px;
+    top: 350px;
+    width: 20px;
+    height: 20px;
+  }
+  input {
+    display: none;
+  }
+  label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    display: block;
+  }
+  label:active {
+    font-weight: 900;
+    background-color: #9356DC;
+    color: #9356DC;
+  }
+  .like-icon::before {
+    content: "\f004";
+    font-weight: 400;
+    font-size: x-large;
+  }
+  .like-icon:active:before {
+    content: "\f004";
+    font-weight: 900;
+    background: -webkit-gradient linear, left top, left bottom, from(#FF79DA), to(#9356DC);
+    animation: like 0.5 ease-in both;
+  }
+  @keyframes like {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }/*# sourceMappingURL=main.css.map */

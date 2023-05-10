@@ -25,15 +25,18 @@
         </header>
         <!--CONTENU-->
         <main>
+            <!--LOCAL-->
             <div class="place">
                 <i class="place__icon fa-solid fa-location-dot"></i>
                 <a class="place__city" href="#">Paris, Belleville</a>
             </div>
+            <!--PRESENTATION-->
             <div class="presentation">
                 <h1 class="presentation__heading">Réservez le menu qui vous convient</h1>
                 <p class="presentation__detail">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <button type="button button--hover" class="presentation__btn" href="#Restaurants">Explorer nos restaurants</button>
+                <button type="button" class="presentation__btn">Explorer nos restaurants</button>
             </div>
+            <!--FONCTIONNNEMENT-->
             <div class="operation">
                 <h2>Fonctionnement</h2>
                 <div class="step">
@@ -58,11 +61,12 @@
                     <div class="step__order">3</div>
                 </div>
             </div>
+            <!--RESTAURANTS-->
             <div class="restaurants" id="Restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
                 <div class="restaurants__card">
                     <article class="card">
-                        <a href="/restaurants/palette.html"></a>
+                        <a href="#">
                             <div class="card__image">
                                 <img src="./assets/images/restaurants/Palette_du_gout.jpg" alt="Photo d'un plat proposé par le restaurant La palette du goût">
                                 <div class="box-new">Nouveau</div>
@@ -72,11 +76,12 @@
                                     <h3 class="card-title">La palette du goût</h3>
                                     <p class="card-place">Ménilmontant</p>
                                 </div>
-                                <div class="fav-card">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
                             </div>
                         </a>
+                        <form id="like-fav">
+                            <label for="like"><i class="like-icon"></i></label>
+                            <input type="checkbox" name="like" id="like">
+                        </form>
                     </article>
                     <a href="#">
                         <article class="card">
@@ -89,9 +94,10 @@
                                     <h3 class="card-title">La note enchantée</h3>
                                     <p class="card-place">Charonne</p>
                                 </div>
-                                <div class="fav-card">
+                                <button class="button fav-card">
                                     <i class="fa-regular fa-heart"></i>
-                                </div>
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
                             </div>
                         </article>
                     </a>
@@ -105,9 +111,10 @@
                                     <h3 class="card-title">À la française</h3>
                                     <p class="card-place">Cité Rouge</p>
                                 </div>
-                                <div class="fav-card">
+                                <button class="button fav-card">
                                     <i class="fa-regular fa-heart"></i>
-                                </div>
+                                    <i class="fa-solid fa-heart"></i>
+                                </button>
                             </div>
                         </article>
                     </a>
@@ -121,9 +128,11 @@
                                     <h3 class="card-title">Le délice des sens</h3>
                                     <p class="card-place">Folie-Méricourt</p>
                                 </div>
-                                <div class="fav-card">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
+                                <form id="like-fav">
+                                    <label for="like"><i class="fa-regular fa-heart"></i></label>
+                                    <input type="checkbox" name="like" id="like">
+                                    <i class="fa-solid fa-heart"></i>
+                                </form>
                             </div>
                         </article>
                     </a>
