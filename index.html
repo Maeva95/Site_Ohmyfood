@@ -13,9 +13,13 @@
 </head>
 
 <body>
-    <div class="loader">
-        <div></div>
-        <div></div>
+    <div class="loader-space">
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <div class="main-container">
         <!--HEADER-->
@@ -38,7 +42,7 @@
             </div>
             <!--FONCTIONNNEMENT-->
             <div class="operation">
-                <h2>Fonctionnement</h2>
+                <h2 class="operation__title">Fonctionnement</h2>
                 <div class="step">
                     <ul class="step__detail">
                         <li><i class="fa-solid fa-mobile-screen-button"></i></li>
@@ -66,94 +70,109 @@
                 <h2 class="restaurants__title">Restaurants</h2>
                 <div class="restaurants__card">
                     <article class="card">
-                        <a href="#">
-                            <div class="card__image">
+                        <div class="card__image">
+                            <a href="/restaurants/palette.html">
                                 <img src="./assets/images/restaurants/Palette_du_gout.jpg" alt="Photo d'un plat proposé par le restaurant La palette du goût">
                                 <div class="box-new">Nouveau</div>
-                            </div>
-                            <div class="card__content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">La palette du goût</h3>
-                                    <p class="card-place">Ménilmontant</p>
-                                </div>
-                            </div>
-                        </a>
-                        <form id="like-fav">
-                            <label for="like"><i class="like-icon"></i></label>
-                            <input type="checkbox" name="like" id="like">
+                            </a>
+                        </div>
+                        <div class="card__content">
+                            <a href="/restaurants/palette.html">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </a>
+                        </div>
+                        <form class="card__like" id="like-case1">
+                            <label for="like1">
+                                <input type="checkbox" name="like-case" id="like1">
+                                    <i class="like-unchecked1 fa-solid fa-heart"></i>
+                                    <i class="like-checked1 fa-regular fa-heart"></i>
+                            </label>
                         </form>
                     </article>
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__image">
-                                <img src="./assets/images/restaurants/Note_enchantee.jpg" alt="Photo d'un plat proposé par le restaurant La Note enchantée">
+                    <article class="card">
+                        <div class="card__image">
+                            <a href="#">
+                                <img src="./assets/images/restaurants/Note_enchantee.jpg" alt="Photo d'un plat proposé par le restaurant La note enchantée">
                                 <div class="box-new">Nouveau</div>
-                            </div>
-                            <div class="card__content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">La note enchantée</h3>
-                                    <p class="card-place">Charonne</p>
-                                </div>
-                                <button class="button fav-card">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__image">
+                            </a>
+                        </div>
+                        <div class="card__content">
+                            <a href="#">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </a>
+                        </div>
+                        <form class="card__like" id="like-case2">
+                            <label for="like2">
+                                <input type="checkbox" name="like-case" id="like2">
+                                    <i class="like-checked2 fa-regular fa-heart"></i>
+                                    <i class="like-unchecked2 fa-solid fa-heart"></i>
+                            </label>
+                        </form>
+                    </article>
+                    <article class="card">
+                        <div class="card__image">
+                            <a href="#">
                                 <img src="./assets/images/restaurants/a_la_francaise.jpg" alt="Photo d'un plat proposé par le restaurant À la française">
-                            </div>
-                            <div class="card__content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">À la française</h3>
-                                    <p class="card-place">Cité Rouge</p>
-                                </div>
-                                <button class="button fav-card">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="#">
-                        <article class="card">
-                            <div class="card__image">
+                            </a>
+                        </div>
+                        <div class="card__content">
+                            <a href="#">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </a>
+                        </div>
+                        <form class="card__like" id="like-case3">
+                            <label class="like-case" for="like3">
+                                <input type="checkbox" name="like-case" id="like3">
+                                    <i class="like-checked3 fa-regular fa-heart"></i>
+                                    <i class="like-unchecked3 fa-solid fa-heart"></i>
+                            </label>
+                        </form>
+                    </article>
+                    <article class="card">
+                        <div class="card__image">
+                            <a href="#">
                                 <img src="./assets/images/restaurants/delice_des_sens.jpg" alt="Photo d'un plat proposé par le restaurant Le délice des sens">
-                            </div>
-                            <div class="card__content">
-                                <div class="card-txt">
-                                    <h3 class="card-title">Le délice des sens</h3>
-                                    <p class="card-place">Folie-Méricourt</p>
-                                </div>
-                                <form id="like-fav">
-                                    <label for="like"><i class="fa-regular fa-heart"></i></label>
-                                    <input type="checkbox" name="like" id="like">
-                                    <i class="fa-solid fa-heart"></i>
-                                </form>
-                            </div>
-                        </article>
-                    </a>
+                            </a>
+                        </div>
+                        <div class="card__content">
+                            <a href="#">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </a>
+                        </div>
+                        <form class="card__like" id="like-case4">
+                            <label for="like4">
+                                <input type="checkbox" name="like-case" id="like4">
+                                    <i class="like-checked4 fa-regular fa-heart"></i>
+                                    <i class="like-unchecked4 fa-solid fa-heart"></i>
+                            </label>
+                        </form>
+                    </article>
                 </div>
             </div>
         </main>
         <!--FOOTER-->
         <footer>
             <section class="footer">
-                <h2 class="title-footer">ohmyfood</h2>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-utensils"></i>
-                        <a href="#">Proposer un restaurant</a>
+                <h2 class="footer__title">ohmyfood</h2>
+                <ul class="footer__content">
+                    <li class="item1">
+                        <i class="item2 fa-solid fa-utensils"></i>
+                        <a class="item3" href="#">Proposer un restaurant</a>
                     </li>
-                    <li>
+                    <li class="item4">
                         <i class="fa-solid fa-handshake-angle fa-sm"></i>
                         <a href="#">Devenir partenaire</a>
                     </li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="item3">
+                        <a href="#">Mentions légales</a>
+                    </li>
+                    <li class="item4">
+                        <a href="#">Contact</a>
+                    </li>
                 </ul>
             </section>
         </footer>

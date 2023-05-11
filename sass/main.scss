@@ -7,33 +7,133 @@ $colors-font-new: #008766;
 $colors-font-top: #353535;
 $colors-font-primary: #000000;
 $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+$colors-btn: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+$colors-btn: -moz-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 
+@mixin btn {
+    padding: 13px 0;
+    margin: 20px 0;
+    color: $colors-bg-operation;
+    width: 218px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    border: 0;
+    background: $colors-btn;
+    &:hover {
+        background-color: $colors-step-order;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    }
 
+}
+
+@mixin main-title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+@mixin typo-btn {
+    margin:0 ;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin footer {
+        background-color: $colors-font-top;
+        padding: 22px 25px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+}
 
 @media only screen and (max-width: 768px) {
 
-    @mixin button {
-        padding: 13px 0;
-        margin: 20px 0;
-        color: $colors-bg-operation;
-        width: 218px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 25px;
-        border: 0;
-        background: $colors-btn;
-        &:hover {
-            background-color: $colors-step-order;
+
+    /**** LOADER ****/
+    .loader-space {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: hsla(300, 14%, 95%, 0.83);
+        animation-duration: 0.2s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-name: infinite;
+
+    }
+    @keyframes infinite {
+        0% {
+            opacity: 1;
         }
-    
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    .loader {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        & div{
+            position: absolute;
+            top: 33px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: $colors-btn;
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        
+        }
+        & div:nth-child(1) {
+            left: 8px;
+            animation: loader1 0.6s infinite;
+        }
+        & div:nth-child(2){
+            left: 8px;
+            animation: loader2 0.6s infinite;
+        }
+        & div:nth-child(3){
+            left: 32px;
+            animation: loader2 0.6s infinite;
+        }
+        & div:nth-child(4){
+            left: 56px;
+            animation: loader3 0.6s infinite;
+        }
     }
 
-    @mixin favorite {
-        width: 22px;
-        height: 22px;
-        box-sizing: border-box;
-        position: relative;
-        
-
+    @keyframes loader1 {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    @keyframes loader3 {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    @keyframes loader2 {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(24px, 0);
+        }
     }
 
     body {
@@ -43,12 +143,6 @@ $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         color: $colors-font-primary;
         margin: 0;
     }
-
-    button {
-        font-weight: 500;
-        font-size: 16px;
-        @include button;
-        }
 
     .header {
         background: $colors-bg-operation;
@@ -62,42 +156,40 @@ $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
                 height: 44px;
                 padding: 14px 0 5px 0;
             }
-
             &__back {
                 color: $colors-font-primary;
                 position: absolute;
                 left: 23px;
             }
     }
-
+    /**** LOCAL ****/
     .place {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 16px 0;
+        padding: 15px 0;
         gap: 17px;
         color: $colors-font-top;
+        font-size: 16px;
+        font-weight: 500;
         background: $colors-bg-place;
         &__city {
             text-decoration: none;
             color: $colors-font-top;
-            font-weight: 500;
-            font-size: 16px;
             padding-right: 10px;
         }
     }
-
+    /**** PRESENTATION ****/
     .presentation {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 39px 20px 57px 20px;
+        padding: 39px 20px 30px 20px;
         &__heading {
             padding: 0 25px;
-            font-weight: 700;
-            font-size: 24px;
+            @include main-title;
             color: $colors-font-primary;
         }
 
@@ -109,13 +201,22 @@ $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             margin: 0;
         }
     }
+    button {
+        @include btn;
+        @include typo-btn;
+        margin: 27px 0;
+        }
 
+    /**** FONCTIONNEMENT ****/
     .operation {
         background: $colors-bg-operation;
         padding: 48px 20px;
         display: flex;
         flex-direction: column;
         gap: 26px;
+        &__title {
+            @include main-title;
+        }
     }
     .step {
         display: flex;
@@ -130,7 +231,7 @@ $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             border-radius: 20px;
             gap: 20px;
-            margin: 0px 0px 0px 10px;
+            margin-left: 10px;
             list-style: none;
             padding: 10px 40px;
             position: relative;
@@ -148,14 +249,16 @@ $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
         }
         
     }
-
+    /**** RESTAURANTS ****/
     .restaurants {
         display: flex;
         flex-direction: column;
         padding: 54px 18px 66px 17px;
-        gap: 20px;
+        gap: 25px;
         &__title{
             padding-left: 3px;
+            padding-bottom: 3px;
+            @include main-title;
         }
         &__card{
             display: flex;
@@ -171,24 +274,30 @@ $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             }
 
         }
-
     }
-
     .card {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: 180px 71px;
+        grid-template-areas: 
+            'image-card image-card image-card'
+            'txt-card txt-card like';
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
         height: 251px;
         box-sizing: border-box;
-        background: $colors-bg-operation;
+        background: #fff;
         border-radius: 15px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-        &__image {
-            height: 70%;
+        &__image { 
+            grid-area: image-card;
+            grid-column-start: 1;
+            grid-column-end: 4;
             width: 100%;
+            height: 100%;
             box-sizing: border-box;
-            position: relative;
-            & img{
+            & img {
                 object-fit: cover;
                 border-top-left-radius: 15px;
                 border-top-right-radius: 15px;
@@ -203,83 +312,139 @@ $colors-btn: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
                 background-color: $colors-bg-new;
                 color: $colors-font-new;
                 border-radius: 2px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+        }
+        &__content { 
+            grid-area: txt-card;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            height: 71px;
+            padding: 16px 25px 12px 13px;
+            box-sizing: border-box;
+            & h3 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 700;
+            };
+            & p {
+                margin: 0;
+                font-size: 17px;
+                font-weight: 300;
             }
         }
-        &__content {
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 25px 12px 13px;
-            & .card-txt {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                & .card-title {
-                    margin: 0;
-                }
-                & .card-place {
-                    margin: 0;
-                    font-size: 17px;
-                    font-weight: 300;
-                }
-            }
+        &__like { 
+            grid-area: like;
+            box-sizing: border-box;
+            padding: 25px;
         }
     }
-    /**like**/
-    #like-fav {
-        position: absolute;
-        left: 270px;
-        top: 350px;
-        width: 20px;
-        height: 20px;
+
+
+    /**FAVORI**/
+    label {
+        cursor: pointer;
+    }
+
+    .like-checked1, .like-checked2, .like-checked3, .like-checked4 {
+        font-size: 22px;} 
+    .like-unchecked1, .like-unchecked2, .like-unchecked3, .like-unchecked4 {
+        font-size: 23px; color: blueviolet;
     }
     
-    input {
+    /**like1**/
+    input[type="checkbox"]#like1, .like-unchecked1 {
+        display: none;
+    }
+    input[type="checkbox"]#like1:checked ~ .like-unchecked1{
+        display: inline-block;
+    }
+    input[type="checkbox"]#like1:checked ~ .like-checked1 {
         display: none;
     }
 
-    label {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        cursor: pointer;
-        display: block;
+    /**like2**/
+    input[type="checkbox"]#like2, .like-unchecked2 {
+        display: none;
     }
-    label:active{
-        font-weight: 900;
-        background-color: #9356DC;
-        color: #9356DC;
+    input[type="checkbox"]#like2:checked ~ .like-unchecked2 {
+        display: inline-block;
     }
-    .like-icon::before{
-        content: "\f004";
-        font-weight: 400;
-        font-size: x-large;
+    input[type="checkbox"]#like2:checked ~ .like-checked2 {
+        display: none;
     }
-    .like-icon:active:before {
-        content: "\f004";
-        font-weight: 900;
-        background: -webkit-gradient (linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-        
-        animation: like 0.5 ease-in both;
+
+    /**like3**/
+    input[type="checkbox"]#like3, .like-unchecked3 {
+        display: none;
     }
-    
-    @keyframes like {
-        0% {
-            opacity: 0.3;
+    input[type="checkbox"]#like3:checked ~ .like-unchecked3 {
+        display: inline-block;
+    }
+    input[type="checkbox"]#like3:checked ~ .like-checked3 {
+        display: none;
+    }
+
+    /**like4**/
+    input[type="checkbox"]#like4, .like-unchecked4 {
+        display: none;
+    }
+    input[type="checkbox"]#like4:checked ~ .like-unchecked4 {
+        display: inline-block;
+    }
+    input[type="checkbox"]#like4:checked ~ .like-checked4 {
+        display: none;
+    }
+
+
+    /**** FOOTER ****/
+
+    .footer {
+        @include footer;
+        &__title {
+            font-family: Shrikhand, 'sans-serif';
+            margin: 0;
+            font-size: 18px;
         }
-        100% {
-            opacity: 1;
-            
+        &__content{
+            margin: 16px 0;
+            list-style: none;
+            padding: 0;
+            & a{
+                text-decoration: none;
+                color: #fff;
+            }
+            & li{
+                display: grid;
+                grid-template-columns: auto auto ;
+                grid-template-rows: auto ;
+                gap: 7px;
+                align-items: center;
+                justify-items: start;
+                justify-content: start;
+                padding-top: 7px;
+                
+                & .fa-utensils {
+                    padding-right: 6px;
+                    font-size: 14px;
+                }
+
+                & .fa-handshake-angle {
+                    font-size: 14px;
+                }
+            }
         }
+
     }
     
     
-    
-    }
+
+/**** PAGE RESTAURANTS ****/
 
 
 
 
 
+}
