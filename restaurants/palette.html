@@ -17,20 +17,23 @@
         <!--HEADER-->
         <header class="header">
             <a class="header__back" href="/index.html"><i class="fa-solid fa-arrow-left"></i></a>
-            <img class="header__logo" src="./assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood Paris">
+            <img class="header__logo" src="/assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood Paris">
         </header>
         <!--CONTENU-->
         <main class="contenu">
-            <div class="entete-image">
+            <div class="image-hero">
                 <img src="/assets/images/restaurants/Palette_du_gout.jpg" alt="Photo d'un plat proposé par le restaurant La palette du goût">
             </div>
             <div class="menu">
                 <div class="title-menu">
                     <h1 class="section-title">La palette du goût</h1>
-                    <div class="favoris">
-                        <i class="fa-regular fa-heart fa-xl"></i>
-                        <i class="fa-solid fa-heart fa-xl"></i>
-                    </div>
+                    <form class="card__like" id="like-case1">
+                        <label for="like1">
+                            <input type="checkbox" name="like-case" id="like1">
+                                <i class="like-unchecked1 fa-solid fa-heart"></i>
+                                <i class="like-checked1 fa-regular fa-heart"></i>
+                        </label>
+                    </form>
                 </div>
                 <section class="section-card entrees">
                     <h2 class="section-card-title">ENTRÉES</h2>
