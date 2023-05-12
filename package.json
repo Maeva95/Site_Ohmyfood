@@ -1,0 +1,15 @@
+{
+  "name": "projet4",
+  "version": "1.0.0",
+  "description": "site ohmyfood Paris",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maeva95/Site_Ohmyfood_P4_Tarati_Maeva.git"
+  },
+  "author": "Maeva95",
+  "license": "ISC"
+}
