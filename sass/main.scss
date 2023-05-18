@@ -519,7 +519,7 @@ input[type="checkbox"]#like4:checked ~ .like-checked4 {
     &__card{
         height: 69px;
         display: grid;
-        grid-template-columns: auto 65px 59px;
+        grid-template-columns: auto 65px ;
         justify-items: start;
         gap: 10px;
         position: relative;
@@ -533,8 +533,7 @@ input[type="checkbox"]#like4:checked ~ .like-checked4 {
     padding: 10px 15px 0;
     align-items: flex-start;
     box-sizing: border-box;
-    overflow-x: hidden;
-    box-sizing: border-box;
+    width: 100%;
     &__title {
         margin: 0;
         font-size: 18px;
@@ -895,7 +894,7 @@ input[type="checkbox"]#like4:checked ~ .like-checked4 {
                 }
                 &[type=menu1]:checked +.confirm i{
                     display: inline-block;
-                    transform: rotate(-45 deg);
+                    transform: rotate(-45deg);
                     visibility: visible;
                 }
             }
