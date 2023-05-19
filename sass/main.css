@@ -478,102 +478,96 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
 }
 
 .menu-section {
-  display: grid;
-  gap: 12px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .menu-section__title {
-  font-weight: 300;
   font-size: 16px;
+  font-weight: 300;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 8px;
-  margin: 0;
+  margin-bottom: 12px;
 }
 .menu-section__card {
-  height: 69px;
-  display: grid;
-  grid-template-columns: auto 65px;
-  justify-items: start;
-  gap: 10px;
-  position: relative;
-  background-color: #fff;
+  padding: 15px 12px;
+  background: #fff;
   border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  animation: show 750ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transform: scale(0);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+  justify-content: space-between;
 }
-
-.choice {
+.menu-section__card .choice {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 10px 15px 0;
-  align-items: flex-start;
-  box-sizing: border-box;
-  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
 }
-.choice__title {
-  margin: 0;
+.menu-section__card .choice__title {
   font-size: 18px;
   font-weight: 500;
+  margin: 0;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
-.choice__detail {
-  margin: 0;
+.menu-section__card .choice__detail {
   font-size: 15px;
   font-weight: 300;
+  margin: 0;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-.price {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: end;
-  padding: 23px 20px 0 20px;
-  align-items: center;
-}
-.price p {
+.menu-section__card .price {
   font-size: 15px;
   font-weight: 700;
-  margin: 0;
-  border-radius: 0 15px 15px 0;
+  align-self: flex-end;
+  padding: 0px 30px;
 }
-
-.check {
+.menu-section__card .price p {
+  margin: 0;
+}
+.menu-section__card .check {
+  background-color: #99E2D0;
+  color: #fff;
+  font-size: 18px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 59px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
-  width: 59px;
-  box-sizing: border-box;
-  color: #fff;
-  border-radius: 0 15px 15px 0;
-  position: absolute;
-  right: -59px;
-  height: 69px;
-  width: 59px;
-  align-items: center;
-  background-color: #99E2D0;
-  opacity: 0;
-  animation: slide 1s ease forwards;
-  animation-delay: 0.1s;
+  margin: -20px -71px -20px -16px;
+  transition: margin-right 500ms ease;
 }
-@keyframes slide {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-    visibility: visible;
-  }
+.menu-section__card .check i {
+  font-size: 20px;
+  transform: rotate(0);
+  transition: transform 500ms ease;
+}
+.menu-section__card:hover > .check {
+  margin-right: -15px;
+}
+.menu-section__card:hover > .check > i {
+  transform: rotate(-360deg);
 }
 
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /******** MEDIA QUERIES *******/
 /**** VERSION MOBILE ****/
 @media only screen and (max-width: 768px) {
@@ -815,98 +809,6 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
     width: 100%;
     justify-content: space-between;
   }
-  /** TEST MENU **/
-  .section {
-    display: grid;
-    gap: 12px;
-  }
-  .section__title {
-    font-weight: 300;
-    font-size: 16px;
-    border-bottom: 3px solid #99E2D0;
-    width: 40px;
-    padding-bottom: 8px;
-    margin: 0;
-  }
-  .section__card {
-    height: 69px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    background-color: #fff;
-    border-radius: 15px;
-    position: relative;
-  }
-  .section__card input {
-    display: none;
-  }
-  .section__card input[type=menu1]#checkbox1 + .confirm {
-    width: 0;
-    overflow: hidden;
-  }
-  .section__card input[type=menu1]#checkbox1:checked + .confirm {
-    display: inline-block;
-    width: 59px;
-    background-color: #99E2D0;
-    transform: scaleX(1);
-    visibility: visible;
-  }
-  .section__card input[type=menu1]:checked + .confirm i {
-    display: inline-block;
-    transform: rotate(-45deg);
-    visibility: visible;
-  }
-  .card1 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-  .choix {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 10px 15px 0;
-    align-items: flex-start;
-    box-sizing: border-box;
-  }
-  .choix__title {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .choix__detail {
-    margin: 0;
-    font-size: 15px;
-    font-weight: 300;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .prix {
-    padding: 0 25px;
-  }
-  .confirm {
-    height: 69px;
-    width: 59px;
-    background-color: #99E2D0;
-    color: #fff;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0 15px 15px 0;
-    transform-origin: right;
-    transform: scaleX(0);
-  }
-  .confirm i {
-    color: #fff;
-  }
-  /** FIN TEST MENU **/
 }
 /**** VERSION TABLETTE & DESKTOP ****/
 @media screen and (min-width: 768px) {
