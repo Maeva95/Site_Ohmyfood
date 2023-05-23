@@ -19,8 +19,8 @@
   align-items: center;
   justify-content: center;
   background: hsla(300, 14%, 95%, 0.83);
-  animation-duration: 0.2s;
-  animation-delay: 2s;
+  animation-duration: 200ms;
+  animation-delay: 1500ms;
   animation-timing-function: ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -54,28 +54,28 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: #9356DC;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 
 .loader div:nth-child(1) {
   left: 8px;
-  animation: loader1 0.6s infinite;
+  animation: loader1 600ms infinite;
 }
 
 .loader div:nth-child(2) {
   left: 8px;
-  animation: loader2 0.6s infinite;
+  animation: loader2 600ms infinite;
 }
 
 .loader div:nth-child(3) {
   left: 32px;
-  animation: loader2 0.6s infinite;
+  animation: loader2 600ms infinite;
 }
 
 .loader div:nth-child(4) {
   left: 56px;
-  animation: loader3 0.6s infinite;
+  animation: loader3 600ms infinite;
 }
 
 @keyframes loader1 {
@@ -138,14 +138,14 @@ button {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   border: 0;
-  background: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   margin: 0;
   font-size: 16px;
   font-weight: 500;
   margin: 27px 0;
 }
 button:hover {
-  background-color: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
@@ -378,8 +378,13 @@ label {
 }
 
 .like-unchecked1, .like-unchecked2, .like-unchecked3, .like-unchecked4 {
-  font-size: 23px;
-  color: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  font-size: 22px;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 /**like1**/
@@ -693,57 +698,6 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
     box-sizing: border-box;
     padding: 22px;
   }
-  /**FAVORI**/
-  label {
-    cursor: pointer;
-  }
-  .like-checked1, .like-checked2, .like-checked3, .like-checked4 {
-    font-size: 22px;
-  }
-  .like-unchecked1, .like-unchecked2, .like-unchecked3, .like-unchecked4 {
-    font-size: 23px;
-    color: -webkit-linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  }
-  /**like1**/
-  input[type=checkbox]#like1, .like-unchecked1 {
-    display: none;
-  }
-  input[type=checkbox]#like1:checked ~ .like-unchecked1 {
-    display: inline-block;
-  }
-  input[type=checkbox]#like1:checked ~ .like-checked1 {
-    display: none;
-  }
-  /**like2**/
-  input[type=checkbox]#like2, .like-unchecked2 {
-    display: none;
-  }
-  input[type=checkbox]#like2:checked ~ .like-unchecked2 {
-    display: inline-block;
-  }
-  input[type=checkbox]#like2:checked ~ .like-checked2 {
-    display: none;
-  }
-  /**like3**/
-  input[type=checkbox]#like3, .like-unchecked3 {
-    display: none;
-  }
-  input[type=checkbox]#like3:checked ~ .like-unchecked3 {
-    display: inline-block;
-  }
-  input[type=checkbox]#like3:checked ~ .like-checked3 {
-    display: none;
-  }
-  /**like4**/
-  input[type=checkbox]#like4, .like-unchecked4 {
-    display: none;
-  }
-  input[type=checkbox]#like4:checked ~ .like-unchecked4 {
-    display: inline-block;
-  }
-  input[type=checkbox]#like4:checked ~ .like-checked4 {
-    display: none;
-  }
   /**** FOOTER ****/
   .footer {
     padding: 22px 25px;
@@ -836,7 +790,7 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
   }
   /**** FONCTIONNEMENT ****/
   .operation {
-    padding: 48px 50px;
+    padding: 48px 121px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -883,7 +837,7 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 54px 50px 66px;
+    padding: 54px 121px 66px;
   }
   .restaurants__title {
     padding-left: 3px;
