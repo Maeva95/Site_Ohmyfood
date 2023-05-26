@@ -10,14 +10,8 @@ $color-font-location: #353535;
 $color-font-primary: #000000;
 $color-gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $color-bg-heart: transparent ;
-$shadow-head: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-$shadow-card: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-$shadow-button: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-$shadow-hover: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
-$shadow-location: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-$shadow-card-rest: 0 5px 15px rgba(0, 0, 0, 0.15);
-$anim-dur: 1s;
-$anim-delay: calc($anim-dur / 4);
+$anim-dur: 1.5s;
+$anim-delay: calc($anim-dur / 2);
 
 /** MAPS & LISTS **/
 $font-size :(Title: 24px, Subtitle: 18px, Summary: 17px, Link: 16px, Detail: 15px, Badge: 14px);
@@ -562,7 +556,7 @@ button {
 }
 
 
-/**FAVORI**/
+/***** FAVORI*****/
 label {
     cursor: pointer;
 }
@@ -707,7 +701,6 @@ input[type="checkbox"]#like4:checked ~ .like-checked4 {
         padding: 15px 12px;
         background: $color-white;
         border-radius: 15px;
-        transform-origin: 0% 50%;
         overflow: hidden;
         box-shadow: map-get($box-shadow, card-rest);
         display: flex;
@@ -734,7 +727,6 @@ input[type="checkbox"]#like4:checked ~ .like-checked4 {
                 margin: 0;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                
             }
             &__detail {
                 font-size: map-get($font-size, Detail);
@@ -781,10 +773,16 @@ input[type="checkbox"]#like4:checked ~ .like-checked4 {
 }
 @keyframes show {
     0% {
-        transform: scaleX(0);
+        transform: translateY(80px);
+        opacity: 0;
     }
+    40% {
+        opacity: 0.1;
+    }
+
     100%{
-        transform: scaleX(1);
+        transform: translateY(0px);
+        opacity:1;
         visibility: visible;
     }
 }
