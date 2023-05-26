@@ -13,10 +13,10 @@
   align-items: center;
   justify-content: center;
   background: hsla(300, 14%, 95%, 0.83);
-  animation: 1500ms 800ms normal 1 forwards infinite;
+  animation: 1.5ms 800ms normal 1 forwards run;
 }
 
-@keyframes infinite {
+@keyframes run {
   0% {
     opacity: 1;
     visibility: visible;
@@ -45,22 +45,22 @@
 
 .loader div:nth-child(1) {
   left: 8px;
-  animation: loader1 800ms infinite;
+  animation: loader1 800ms 6;
 }
 
 .loader div:nth-child(2) {
   left: 8px;
-  animation: loader2 800ms infinite;
+  animation: loader2 800ms 6;
 }
 
 .loader div:nth-child(3) {
   left: 32px;
-  animation: loader2 800ms infinite;
+  animation: loader2 800ms 6;
 }
 
 .loader div:nth-child(4) {
   left: 56px;
-  animation: loader3 800ms infinite;
+  animation: loader3 800ms 6;
 }
 
 @keyframes loader1 {
@@ -161,7 +161,7 @@ button {
   margin: 27px 0;
 }
 button:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  opacity: 0.9;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 }
 
