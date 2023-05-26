@@ -25,14 +25,76 @@ $font-weight :(Bold: 700, Medium: 500, Light: 300);
 $box-shadow: (head: 0 2px 4px 0 rgba(0, 0, 0, 0.15), button: 0 4px 10px 0 rgba(0, 0, 0, 0.25),hover: 0 4px 15px 0 rgba(0, 0, 0, 0.35), card: 0 4px 15px 0 rgba(0, 0, 0, 0.1), location: 0 4px 15px 0 rgba(0, 0, 0, 0.15), card-rest: 0 5px 15px rgba(0, 0, 0, 0.15));
 $breakpoints: (mobile: 767px, tab: 1024px, desktop: 1440px);
 
-.main-container {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+/** MIXIN **/
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        padding: 0px;
+    } 
 }
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tab)) and (min-width: map-get($breakpoints, mobile)){
+        padding: 30px 100px;
+    } 
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, tab)){
+        padding: 30px 180px;
+    } 
+}
+
+
+@mixin btn-home {
+    padding: 13px 0;
+    margin: 20px 0;
+    color: $color-white;
+    width: 218px;
+    box-shadow: map-get($box-shadow, button);
+    border-radius: 25px;
+    border: 0;
+    background: $color-gradient;
+    &:hover {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+        box-shadow: map-get($box-shadow, hover);
+    }
+
+}
+
+@mixin main-title {
+    margin: 0;
+    font-size: map-get($font-size, Title);
+    font-weight: map-get($font-weight, Bold);
+    width: 100%;
+}
+
+@mixin heading-title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: map-get($font-weight, Bold);;
+    width: 100%;
+}
+
+@mixin typo-btn {
+    margin:0 ;
+    font-size: map-get($font-size, Link);
+    font-weight: map-get($font-weight, Medium);
+}
+
+@mixin footer {
+        background-color: $color-font-location;
+        font-size: map-get($font-size, Link);
+        font-weight: 400;
+        color: #fff;
+}
+
+@mixin card{
+    background-color: $color-white;
+    border-radius: 15px;
+    box-shadow: map-get($box-shadow, card);
+}
+
+
 
 /*** LOADER **/
 .loader-space {
@@ -115,75 +177,6 @@ $breakpoints: (mobile: 767px, tab: 1024px, desktop: 1440px);
 }
 
 
-/** MIXIN **/
-@mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, mobile)){
-        padding: 0px;
-    } 
-}
-
-@mixin tablet {
-    @media screen and (max-width: map-get($breakpoints, tab)) and (min-width: map-get($breakpoints, mobile)){
-        padding: 30px 100px;
-    } 
-}
-
-@mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, tab)){
-        padding: 30px 180px;
-    } 
-}
-
-
-@mixin btn-home {
-    padding: 13px 0;
-    margin: 20px 0;
-    color: $color-white;
-    width: 218px;
-    box-shadow: map-get($box-shadow, button);
-    border-radius: 25px;
-    border: 0;
-    background: $color-gradient;
-    &:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-        box-shadow: map-get($box-shadow, hover);
-    }
-
-}
-
-@mixin main-title {
-    margin: 0;
-    font-size: map-get($font-size, Title);
-    font-weight: map-get($font-weight, Bold);
-    width: 100%;
-}
-
-@mixin heading-title {
-    margin: 0;
-    font-size: 40px;
-    font-weight: map-get($font-weight, Bold);;
-    width: 100%;
-}
-
-@mixin typo-btn {
-    margin:0 ;
-    font-size: map-get($font-size, Link);
-    font-weight: map-get($font-weight, Medium);
-}
-
-@mixin footer {
-        background-color: $color-font-location;
-        font-size: map-get($font-size, Link);
-        font-weight: 400;
-        color: #fff;
-}
-
-@mixin card{
-    background-color: $color-white;
-    border-radius: 15px;
-    box-shadow: map-get($box-shadow, card);
-}
-
 /****** CONTENU PAGE ****/
 body {
     background: $color-bg;
@@ -191,7 +184,14 @@ body {
     color: $color-font-primary;
     margin: 0;
 }
-
+.main-container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
 
 .header {
     background: $color-white;
@@ -214,7 +214,6 @@ body {
         @media screen and (min-width: map-get($breakpoints, tablet)) {
             padding: 30px ;
         }
-
     }
     &__back {
         color: $color-font-primary;

@@ -1,14 +1,6 @@
 /** VARIABLES **/
 /** MAPS & LISTS **/
-.main-container {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
+/** MIXIN **/
 /*** LOADER **/
 .loader-space {
   position: fixed;
@@ -95,13 +87,21 @@
     transform: translate(24px, 0);
   }
 }
-/** MIXIN **/
 /****** CONTENU PAGE ****/
 body {
   background: #F6F6F6;
   font-family: "Roboto", sans-serif;
   color: #000000;
   margin: 0;
+}
+
+.main-container {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
