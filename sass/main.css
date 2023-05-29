@@ -88,22 +88,6 @@
   }
 }
 /****** CONTENU PAGE ****/
-body {
-  background: #F6F6F6;
-  font-family: "Roboto", sans-serif;
-  color: #000000;
-  margin: 0;
-}
-
-.main-container {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
 .header {
   background: #fff;
   display: flex;
@@ -112,29 +96,15 @@ body {
   z-index: 1;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-@media screen and (min-width: 1024px) {
-  .header {
-    padding: 30px 180px;
-  }
-}
-@media screen and (max-width: 1024px) and (min-width: 767px) {
-  .header {
-    padding: 30px 100px;
-  }
-}
 .header__logo {
   padding: 10px 0;
   width: 162px;
   height: 44px;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .header__logo {
     width: 200px;
     height: 34px;
-  }
-}
-@media screen and (min-width: ) {
-  .header__logo {
     padding: 30px;
   }
 }
@@ -160,6 +130,11 @@ button {
   font-weight: 500;
   margin: 27px 0;
 }
+@media (min-width: 767px) {
+  button {
+    margin: 0;
+  }
+}
 button:hover {
   opacity: 0.9;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
@@ -176,7 +151,7 @@ button:hover {
   flex-direction: column;
   padding: 22px 25px;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .footer {
     flex-direction: row;
     justify-content: flex-end;
@@ -185,17 +160,17 @@ button:hover {
     gap: 20px;
   }
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .footer__order1 {
     order: 3;
   }
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .footer__order2 {
     order: 1;
   }
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .footer__order3 {
     order: 2;
   }
@@ -207,7 +182,7 @@ button:hover {
   font-weight: 400;
   padding-bottom: 1em;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .footer__title {
     padding: 0 0 0 9px;
   }
@@ -219,7 +194,7 @@ button:hover {
   padding: 0;
   margin: 0;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .footer__content {
     flex-direction: row;
     -moz-column-gap: 7px;
@@ -283,7 +258,7 @@ button:hover {
   font-size: 24px;
   font-weight: 700;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .presentation__heading {
     padding: 30px 0;
     margin: 0;
@@ -299,7 +274,7 @@ button:hover {
   color: #353535;
   margin: 0;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .presentation__detail {
     padding-bottom: 30px;
   }
@@ -317,24 +292,14 @@ button:hover {
   box-sizing: border-box;
   padding: 48px 20px 68px;
 }
-@media screen and (max-width: 1024px) and (min-width: 767px) {
-  .operation {
-    padding: 30px 100px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .operation {
-    padding: 30px 180px;
-  }
-}
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .operation {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 30px 100px 50px;
   }
 }
-@media screen and (min-width: 767px) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .operation {
     padding: 30px 180px 50px;
   }
@@ -347,7 +312,7 @@ button:hover {
   width: 100%;
   margin: 0 0 2px;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .operation__title {
     padding-top: 20px;
   }
@@ -361,7 +326,7 @@ button:hover {
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .operation__step {
     width: 30%;
     flex: 1 1 20%;
@@ -410,24 +375,14 @@ button:hover {
   width: 100%;
   justify-content: space-between;
 }
-@media screen and (max-width: 1024px) and (min-width: 767px) {
-  .restaurants {
-    padding: 30px 100px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .restaurants {
-    padding: 30px 180px;
-  }
-}
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .restaurants {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 30px 100px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .restaurants {
     flex-direction: row;
     flex-wrap: wrap;
@@ -450,7 +405,7 @@ button:hover {
   gap: 18px;
   width: 100%;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .restaurants__card {
     flex-direction: row;
     flex-wrap: wrap;
@@ -508,7 +463,7 @@ button:hover {
   font-weight: 500;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-@media screen and (min-width: 1440px) {
+@media (min-width: 767px) {
   .card__image .box-new {
     right: 17px;
   }
@@ -519,7 +474,7 @@ button:hover {
   padding: 16px 0 12px 13px;
   box-sizing: border-box;
 }
-@media screen and (min-width: 1440px) {
+@media (min-width: 767px) {
   .card__content {
     padding-left: 18px;
   }
@@ -545,11 +500,11 @@ label {
   cursor: pointer;
 }
 
-.like-checked1, .like-checked2, .like-checked3, .like-checked4 {
+.like-checked4, .like-checked3, .like-checked2, .like-checked1 {
   font-size: 24px;
 }
 
-.like-unchecked1, .like-unchecked2, .like-unchecked3, .like-unchecked4 {
+.like-unchecked4, .like-unchecked3, .like-unchecked2, .like-unchecked1 {
   font-size: 24px;
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
@@ -559,56 +514,13 @@ label {
   -moz-text-fill-color: transparent;
 }
 
-/**like1**/
-input[type=checkbox]#like1, .like-unchecked1 {
+/** heart **/
+input[type=checkbox]#like4:checked ~ .like-checked4, .like-unchecked4, input[type=checkbox]#like4, input[type=checkbox]#like3:checked ~ .like-checked3, .like-unchecked3, input[type=checkbox]#like3, input[type=checkbox]#like2:checked ~ .like-checked2, .like-unchecked2, input[type=checkbox]#like2, input[type=checkbox]#like1:checked ~ .like-checked1, .like-unchecked1, input[type=checkbox]#like1 {
   display: none;
 }
 
-input[type=checkbox]#like1:checked ~ .like-unchecked1 {
+input[type=checkbox]#like4:checked ~ .like-unchecked4, input[type=checkbox]#like3:checked ~ .like-unchecked3, input[type=checkbox]#like2:checked ~ .like-unchecked2, input[type=checkbox]#like1:checked ~ .like-unchecked1 {
   display: inline-block;
-}
-
-input[type=checkbox]#like1:checked ~ .like-checked1 {
-  display: none;
-}
-
-/**like2**/
-input[type=checkbox]#like2, .like-unchecked2 {
-  display: none;
-}
-
-input[type=checkbox]#like2:checked ~ .like-unchecked2 {
-  display: inline-block;
-}
-
-input[type=checkbox]#like2:checked ~ .like-checked2 {
-  display: none;
-}
-
-/**like3**/
-input[type=checkbox]#like3, .like-unchecked3 {
-  display: none;
-}
-
-input[type=checkbox]#like3:checked ~ .like-unchecked3 {
-  display: inline-block;
-}
-
-input[type=checkbox]#like3:checked ~ .like-checked3 {
-  display: none;
-}
-
-/**like4**/
-input[type=checkbox]#like4, .like-unchecked4 {
-  display: none;
-}
-
-input[type=checkbox]#like4:checked ~ .like-unchecked4 {
-  display: inline-block;
-}
-
-input[type=checkbox]#like4:checked ~ .like-checked4 {
-  display: none;
 }
 
 /****** CONTENU PAGE RESTAURANT *******/
@@ -649,7 +561,7 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
   padding: 32px 13px 40px;
   width: 100%;
 }
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .menu {
     padding: 32px 160px 40px;
     width: 75%;
@@ -668,7 +580,7 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
   padding-right: 25px;
   box-sizing: border-box;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 767px) {
   .menu__head {
     justify-content: space-between;
     width: 75%;
@@ -771,6 +683,12 @@ input[type=checkbox]#like4:checked ~ .like-checked4 {
   margin-right: -15px;
 }
 .menu-section__card:hover > .check > i {
+  transform: rotate(0);
+}
+.menu-section__card:active > .check {
+  margin-right: -15px;
+}
+.menu-section__card:active > .check > i {
   transform: rotate(0);
 }
 

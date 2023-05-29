@@ -1,0 +1,25 @@
+.header {
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-shadow: map-get($box-shadow, head);
+
+    &__logo {
+        padding: 10px 0;
+        width: 162px;
+        height: 44px;
+        @include bp (mobile){
+            width: 200px;
+            height: 34px;
+            padding: 30px;
+        }
+    }
+    &__back {
+        color: $color-font-primary;
+        position: absolute;
+        font-size: 20px;
+        left: 23px;
+    }
+}

@@ -1,0 +1,76 @@
+.footer {
+    @include footer;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 25px;
+    @include bp (mobile) {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 64px 66px 30px 0;
+        align-items: center;
+        gap: 20px;
+    }
+    &__order1 {
+            @include bp (mobile) {
+            order: 3;
+            }
+        }
+    &__order2 {
+        @include bp (mobile) {
+            order: 1;
+            }
+        }
+    &__order3 {
+        @include bp (mobile) {
+            order: 2;
+        }
+    }
+    &__title {
+        font-family: Shrikhand, 'sans-serif';
+        margin: 0;
+        font-size: map-get($font-size, Subtitle);
+        font-weight: 400;
+        padding-bottom: 1em;
+        @include bp (mobile) {
+            padding: 0 0 0 9px;
+        }
+    }
+    &__content{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        @include bp (mobile) {
+            flex-direction: row;
+            column-gap: 7px;
+            justify-content: space-between;
+            margin: 0;
+        }
+        & a{
+            text-decoration: none;
+            color: #fff;
+        }
+        & li{
+            display: grid;
+            grid-template-columns: auto auto ;
+            grid-template-rows: auto ;
+            gap: 11px;
+            align-items: center;
+            justify-items: start;
+            justify-content: start;
+            padding-top: 7px;
+            
+            & .fa-utensils {
+                padding-right: 5px;
+                font-size: map-get($font-size, Badge);
+            }
+
+            & .fa-handshake-angle {
+                font-size: map-get($font-size, Badge);
+            }
+        }
+    
+    }
+}
