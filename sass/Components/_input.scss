@@ -1,0 +1,117 @@
+%property-font-like{
+    font-size: 24px;
+}
+%property-like {
+    font-size: 24px; 
+    background: $color-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: $color-bg-heart;
+    -moz-text-fill-color: $color-bg-heart;
+}
+.like-checked1 {
+    @extend %property-font-like;
+} 
+.like-checked2 {
+    @extend %property-font-like;
+} 
+.like-checked3 {
+    @extend %property-font-like;
+} 
+.like-checked4 {
+    @extend %property-font-like;
+} 
+
+.like-unchecked1{
+    @extend %property-like;
+}
+.like-unchecked2{
+    @extend %property-like;
+}
+.like-unchecked3{
+    @extend %property-like;
+}
+.like-unchecked4{
+    @extend %property-like;
+}
+
+
+
+/** heart **/
+%check {
+    display: none;
+}
+%check-displayN {
+    display: inline-block;
+}
+input[type="checkbox"]#like1{
+    @extend %check;
+}
+.like-unchecked1 {
+    @extend %check;
+}
+
+input[type="checkbox"]#like1:checked {
+    ~ .like-unchecked1{
+    @extend %check-displayN;
+    }
+} 
+
+input[type="checkbox"]#like1:checked {
+    ~.like-checked1{
+    @extend %check;
+    }
+}
+
+input[type="checkbox"]#like2{
+    @extend %check;
+}
+.like-unchecked2 {
+    @extend %check;
+}
+input[type="checkbox"]#like2:checked {
+    ~ .like-unchecked2 {
+        @extend %check-displayN;
+    }
+}
+input[type="checkbox"]#like2:checked {
+    ~ .like-checked2 {
+    @extend %check;
+    }
+}
+
+
+input[type="checkbox"]#like3{
+    @extend %check;
+} 
+.like-unchecked3 {
+    @extend %check;
+}
+input[type="checkbox"]#like3:checked {
+    ~ .like-unchecked3 {
+        @extend %check-displayN;
+    }
+}
+input[type="checkbox"]#like3:checked{
+    ~ .like-checked3 {
+        @extend %check;
+    }
+}
+
+input[type="checkbox"]#like4{
+    @extend %check;
+} 
+.like-unchecked4 {
+    @extend %check;
+}
+input[type="checkbox"]#like4:checked {
+    ~ .like-unchecked4 {
+        @extend %check-displayN;
+    }
+}
+input[type="checkbox"]#like4:checked{
+    ~ .like-checked4 {
+        @extend %check;
+    }
+}

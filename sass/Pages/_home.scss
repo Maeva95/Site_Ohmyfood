@@ -1,0 +1,247 @@
+/**** LOCAL ****/
+.place {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    gap: 17px;
+    color: $color-font-location;
+    font-size: map-get($font-size, Link);
+    font-weight: map-get($font-weight, Medium);
+    background: $color-bg-location;
+    &__city {
+        text-decoration: none;
+        color: $color-font-location;
+        padding-right: 10px;
+    }
+}
+/*** PRESENTATION ***/
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px 25px;
+    &__heading {
+        color: $color-font-primary;
+        font-size: map-get($font-size, Title);
+        font-weight: map-get($font-weight, Bold);
+        @include bp (mobile) {
+            padding: 30px 0;
+            @include heading-title;
+        }
+    }
+
+    &__detail {
+        padding: 10px 0;
+        font-weight: map-get($font-weight, Light);
+        font-size: map-get($font-size, Subtitle);
+        color: $color-font-location;
+        margin: 0;
+        @include bp (mobile) {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+/*** FONCTIONNEMENT ***/
+.operation {
+    background: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    align-items: stretch;
+    box-sizing: border-box;
+    padding: 48px 20px 68px;
+
+    @include bp (mobile) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding:30px 100px 50px;
+    }
+    @include bp (tab) {
+            padding: 30px 180px 50px;
+    }
+
+    &__title {
+        @include main-title;
+        width: 100%;
+        margin: 0 0 2px;
+        @include bp (mobile) {
+            padding-top: 20px;
+        }
+    }
+    &__step {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    @include bp (mobile) {
+        width: 30%;
+        flex: 1 1 20%;
+
+        }
+    }
+}
+.step-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: $color-bg;
+    box-shadow: map-get($box-shadow, location);
+    border-radius: 20px;
+    gap: 20px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 0 0 14px;
+    list-style: none;
+    padding: 10px 20px 10px 30px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    & .fa-store {
+        color: $color-primary;
+    }
+}
+.step-order {
+    background: $color-primary;
+    padding: 3px 8px;
+    border-radius: 15px;
+    color: $color-white;
+    position: absolute;
+    font-size: map-get($font-size, Badge);
+    font-weight: map-get($font-weight, Medium);
+}
+
+
+
+/*** RESTAURANTS ***/
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 54px 18px 66px 17px;
+    gap: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+
+
+    @include bp (mobile) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px 100px;
+    }
+    @include bp (tab) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 30px 180px;
+    }
+
+
+    &__title{
+        padding-left: 3px;
+        width: 100%;
+        @include main-title;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        gap: 18px;
+        width: 100%;
+        @include bp (mobile) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 50px;
+            column-gap: 100px;
+
+
+        }
+    }    
+}
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-rows: 176px;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 
+        'image-card image-card'
+        'txt-card like';
+    justify-content: space-between;
+    align-items: center;
+    height: 251px;
+    box-sizing: border-box;
+    width: 100%;
+    @include card;
+    flex: 1 1 40%;
+
+    & a{
+        text-decoration: none;
+        color: $color-font-primary;
+        height: 251px;
+        box-sizing: border-box;
+    }
+    &__image { 
+        grid-area: image-card;
+        width: 100%;
+        height: 176px;
+        box-sizing: border-box;
+        & img {
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 100%;
+            width: 100%;
+        }
+        & .box-new {
+            position:absolute;
+            top: 13px;
+            right: 12px;
+            padding: 6px 12px;
+            background-color: $color-badge;
+            color: $color-font-badge;
+            border-radius: 2px;
+            font-size: map-get($font-size, Badge);
+            font-weight: map-get($font-weight, Medium);
+            box-shadow: map-get($box-shadow, head);
+            @include bp (mobile) {
+                right: 17px;
+            }
+        }
+
+    }
+    &__content { 
+        grid-area: txt-card;
+        height: 100%;
+        padding: 16px 0 12px 13px;
+        box-sizing: border-box;
+        @include bp (mobile) {
+            padding-left: 18px;
+        }
+        & h3 {
+            margin: 0;
+            font-size: map-get($font-size, Subtitle);
+            font-weight: map-get($font-weight, Bold);
+        };
+        & p {
+            margin: 0;
+            font-size: map-get($font-size, Summary);
+            font-weight: map-get($font-weight, Light);
+        }
+    }
+    &__like { 
+        grid-area: like;
+        box-sizing: border-box;
+        padding-right: 25px;
+    }
+}

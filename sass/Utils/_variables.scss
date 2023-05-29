@@ -11,3 +11,8 @@ $color-gradient: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 $color-bg-heart: transparent ;
 $anim-dur: 1.5s;
 $anim-delay: calc($anim-dur / 2);
+/** MAPS & LISTS **/
+$font-size :(Title: 24px, Subtitle: 18px, Summary: 17px, Link: 16px, Detail: 15px, Badge: 14px);
+$font-weight :(Bold: 700, Medium: 500, Light: 300);
+$box-shadow: (head: 0 2px 4px 0 rgba(0, 0, 0, 0.15), button: 0 4px 10px 0 rgba(0, 0, 0, 0.25),hover: 0 4px 15px 0 rgba(0, 0, 0, 0.35), card: 0 4px 15px 0 rgba(0, 0, 0, 0.1), location: 0 4px 15px 0 rgba(0, 0, 0, 0.15), card-rest: 0 5px 15px rgba(0, 0, 0, 0.15));
+$breakpoints: ('mobile' : 767px, 'tab' : 1024px);
