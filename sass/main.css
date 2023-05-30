@@ -54,7 +54,7 @@ label {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 30px 25px;
+  margin: 0px 25px 30px;
 }
 .presentation__heading {
   color: #000000;
@@ -63,7 +63,7 @@ label {
 }
 @media (min-width: 767px) {
   .presentation__heading {
-    padding: 30px 0;
+    padding: 30px 0 20px;
     margin: 0;
     font-size: 40px;
     font-weight: 700;
@@ -104,7 +104,7 @@ label {
 }
 @media (min-width: 1024px) {
   .operation {
-    padding: 30px 180px 50px;
+    padding: 37px 180px 50px;
   }
 }
 .operation__title {
@@ -117,7 +117,7 @@ label {
 }
 @media (min-width: 767px) {
   .operation__title {
-    padding-top: 20px;
+    padding-top: 9px;
   }
 }
 .operation__step {
@@ -304,8 +304,13 @@ label {
 
 .image-hero {
   width: 100%;
-  height: 237px;
+  height: 220px;
   position: relative;
+}
+@media (min-width: 767px) {
+  .image-hero {
+    height: 345px;
+  }
 }
 .image-hero img {
   height: 275px;
@@ -313,6 +318,13 @@ label {
   box-sizing: border-box;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 767px) {
+  .image-hero img {
+    height: 385px;
+    -o-object-position: 0% 58%;
+       object-position: 0% 58%;
+  }
 }
 
 /** CONTENU **/
@@ -338,12 +350,13 @@ label {
 @media (min-width: 767px) {
   .menu {
     padding: 51px 160px 40px;
-    width: 75%;
+    width: 73%;
+    gap: 46px;
   }
 }
 @media (min-width: 1024px) {
   .menu {
-    padding: 51px 210px 40px;
+    padding: 51px 208px 40px;
   }
 }
 .menu__head {
@@ -379,10 +392,15 @@ label {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+}
+@media (min-width: 767px) {
+  .menu-section__title {
+    margin: 0;
+  }
 }
 .menu-section__card {
-  padding: 15px 12px;
+  padding: 10px 30px 10px 14px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -396,19 +414,39 @@ label {
 .menu-section__card--1 {
   animation-delay: 0.75s;
 }
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
+}
 .menu-section__card--2 {
   animation-delay: 1.5s;
+}
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
 }
 .menu-section__card--3 {
   animation-delay: 2.25s;
 }
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
+}
 .menu-section__card--4 {
   animation-delay: 3s;
+}
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
 }
 .menu-section__card .choice {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   white-space: nowrap;
   overflow: hidden;
   flex: 1;
@@ -431,7 +469,7 @@ label {
   font-size: 15px;
   font-weight: 700;
   align-self: flex-end;
-  padding: 0px 26px;
+  padding: 0px 18px;
 }
 .menu-section__card .price p {
   margin: 0;
@@ -446,8 +484,13 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -20px -71px -20px -16px;
+  margin: -20px -90px -20px 0px;
   transition: margin-right 300ms linear;
+}
+@media (min-width: 767px) {
+  .menu-section__card .check {
+    margin: -20px -80px -20px 0px;
+  }
 }
 .menu-section__card .check i {
   font-size: 20px;
@@ -455,7 +498,12 @@ label {
   transition: transform 300ms linear;
 }
 .menu-section__card:hover > .check {
-  margin-right: -15px;
+  margin-right: -34px;
+}
+@media (min-width: 767px) {
+  .menu-section__card:hover > .check {
+    margin-right: -18px;
+  }
 }
 .menu-section__card:hover > .check > i {
   transform: rotate(0);
@@ -618,9 +666,15 @@ input[type=checkbox]#like4:checked ~ .like-unchecked4, input[type=checkbox]#like
   align-items: center;
   z-index: 1;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  padding: 14px 0 4px;
+}
+@media (min-width: 767px) {
+  .header {
+    padding: 30px 0;
+  }
 }
 .header__logo {
-  padding: 10px 0;
+  padding: 0;
   width: 162px;
   height: 44px;
 }
@@ -628,7 +682,6 @@ input[type=checkbox]#like4:checked ~ .like-unchecked4, input[type=checkbox]#like
   .header__logo {
     width: 200px;
     height: 34px;
-    padding: 30px;
   }
 }
 .header__back {
@@ -753,8 +806,13 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
 
 .image-hero {
   width: 100%;
-  height: 237px;
+  height: 220px;
   position: relative;
+}
+@media (min-width: 767px) {
+  .image-hero {
+    height: 345px;
+  }
 }
 .image-hero img {
   height: 275px;
@@ -762,6 +820,13 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
   box-sizing: border-box;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 767px) {
+  .image-hero img {
+    height: 385px;
+    -o-object-position: 0% 58%;
+       object-position: 0% 58%;
+  }
 }
 
 /** CONTENU **/
@@ -787,12 +852,13 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
 @media (min-width: 767px) {
   .menu {
     padding: 51px 160px 40px;
-    width: 75%;
+    width: 73%;
+    gap: 46px;
   }
 }
 @media (min-width: 1024px) {
   .menu {
-    padding: 51px 210px 40px;
+    padding: 51px 208px 40px;
   }
 }
 .menu__head {
@@ -828,10 +894,15 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+}
+@media (min-width: 767px) {
+  .menu-section__title {
+    margin: 0;
+  }
 }
 .menu-section__card {
-  padding: 15px 12px;
+  padding: 10px 30px 10px 14px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -845,19 +916,39 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
 .menu-section__card--1 {
   animation-delay: 0.75s;
 }
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
+}
 .menu-section__card--2 {
   animation-delay: 1.5s;
+}
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
 }
 .menu-section__card--3 {
   animation-delay: 2.25s;
 }
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
+}
 .menu-section__card--4 {
   animation-delay: 3s;
+}
+@media (min-width: 767px) {
+  .menu-section__card {
+    padding: 10px 18px;
+  }
 }
 .menu-section__card .choice {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
   white-space: nowrap;
   overflow: hidden;
   flex: 1;
@@ -880,7 +971,7 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
   font-size: 15px;
   font-weight: 700;
   align-self: flex-end;
-  padding: 0px 26px;
+  padding: 0px 18px;
 }
 .menu-section__card .price p {
   margin: 0;
@@ -895,8 +986,13 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -20px -71px -20px -16px;
+  margin: -20px -90px -20px 0px;
   transition: margin-right 300ms linear;
+}
+@media (min-width: 767px) {
+  .menu-section__card .check {
+    margin: -20px -80px -20px 0px;
+  }
 }
 .menu-section__card .check i {
   font-size: 20px;
@@ -904,7 +1000,12 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
   transition: transform 300ms linear;
 }
 .menu-section__card:hover > .check {
-  margin-right: -15px;
+  margin-right: -34px;
+}
+@media (min-width: 767px) {
+  .menu-section__card:hover > .check {
+    margin-right: -18px;
+  }
 }
 .menu-section__card:hover > .check > i {
   transform: rotate(0);
