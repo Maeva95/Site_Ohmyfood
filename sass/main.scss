@@ -1,29 +1,18 @@
-/** VARIABLES **/
+
 @import "./Utils/variables";
-
-
-
-
-
-/** MIXIN **/
 @import "./Utils/mixins";
 
-@import "./Pages/home";
-
-
-/*** LOADER **/
-@import "./Components/loader";
-
-
-/****** CONTENU PAGE ****/
+@import "./Base/typo";
 @import "./Base/base";
 
-@import "./Layout/header";
+@import "./Pages/home";
+@import "./Pages/page-restaurant";
 
-/**** BOUTONS ****/
+@import "./Components/input";
+@import "./Components/loader";
 @import "./Components/boutons";
 
-/**** FOOTER ****/
+@import "./Layout/header";
 @import "./Layout/footer";
 
 

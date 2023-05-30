@@ -1,8 +1,8 @@
 %property-font-like{
-    font-size: 24px;
+    font-size: 22px;
 }
 %property-like {
-    font-size: 24px; 
+    font-size: 22px; 
     background: $color-gradient;
     background-clip: text;
     -webkit-background-clip: text;
@@ -115,3 +115,5 @@ input[type="checkbox"]#like4:checked{
         @extend %check;
     }
 }
+
+

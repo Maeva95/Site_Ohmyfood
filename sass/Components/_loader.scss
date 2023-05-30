@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     background: hsla(300, 14%, 95%, 0.83);
-    animation: 1.5ms 800ms normal 1 forwards run;
+    animation: 0.2s 2500ms normal ease-out 1 forwards run;
 }
 @keyframes run {
     0% {
@@ -24,17 +24,16 @@
 .loader {
     display: inline-block;
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
 }
 .loader div {
     position: absolute;
     top: 33px;
-    width: 13px;
-    height: 13px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: $color-primary;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    background: $color-gradient;
 }
 .loader div:nth-child(1) {
     left: 8px;

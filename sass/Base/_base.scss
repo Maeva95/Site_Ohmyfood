@@ -1,9 +1,13 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
 
 body {
     background: $color-bg;
-    font-family: 'Roboto', sans-serif;
-    color: $color-font-primary;
-    margin: 0;
 }
 .main-container {
     padding: 0;
