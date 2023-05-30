@@ -1,7 +1,6 @@
 .presentation__btn {
     @include btn-home;
     @include typo-btn;
-    margin: 27px 0;
     text-decoration: none;
     &--width{
         width: 186px;

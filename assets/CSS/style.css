@@ -54,7 +54,12 @@ label {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0px 25px 30px;
+  margin: 42px 40px 50px;
+}
+@media (min-width: 767px) {
+  .presentation {
+    margin: 0 40px 50px;
+  }
 }
 .presentation__heading {
   color: #000000;
@@ -104,7 +109,7 @@ label {
 }
 @media (min-width: 1024px) {
   .operation {
-    padding: 37px 180px 50px;
+    padding: 20px 180px 50px;
   }
 }
 .operation__title {
@@ -638,7 +643,6 @@ input[type=checkbox]#like4:checked ~ .like-unchecked4, input[type=checkbox]#like
   margin: 0;
   font-size: 16px;
   font-weight: 500;
-  margin: 27px 0;
   text-decoration: none;
 }
 @media (min-width: 767px) {
