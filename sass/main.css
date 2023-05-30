@@ -608,6 +608,7 @@ input[type=checkbox]#like4:checked ~ .like-unchecked4, input[type=checkbox]#like
 }
 .presentation__btn--width {
   width: 186px;
+  margin: 0;
 }
 
 .header {
