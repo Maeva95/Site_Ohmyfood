@@ -1,4 +1,3 @@
-/** MAPS & LISTS **/
 body {
   font-family: "Roboto", sans-serif;
   color: #000000;
@@ -29,7 +28,6 @@ label {
   cursor: pointer;
 }
 
-/**** LOCAL ****/
 .place {
   display: flex;
   flex-direction: row;
@@ -48,7 +46,6 @@ label {
   padding-right: 10px;
 }
 
-/*** PRESENTATION ***/
 .presentation {
   display: flex;
   flex-direction: column;
@@ -88,7 +85,6 @@ label {
   }
 }
 
-/*** FONCTIONNEMENT ***/
 .operation {
   background: #fff;
   display: flex;
@@ -328,7 +324,6 @@ label {
   }
 }
 
-/** CONTENU **/
 .contenu {
   z-index: 1;
   display: flex;
@@ -538,7 +533,6 @@ label {
   -moz-text-fill-color: transparent;
 }
 
-/** heart **/
 input[type=checkbox]#like4:checked ~ .like-checked4, .like-unchecked4, input[type=checkbox]#like4, input[type=checkbox]#like3:checked ~ .like-checked3, .like-unchecked3, input[type=checkbox]#like3, input[type=checkbox]#like2:checked ~ .like-checked2, .like-unchecked2, input[type=checkbox]#like2, input[type=checkbox]#like1:checked ~ .like-checked1, .like-unchecked1, input[type=checkbox]#like1 {
   display: none;
 }
@@ -774,7 +768,6 @@ input[type=checkbox]#like4:checked ~ .like-unchecked4, input[type=checkbox]#like
   font-size: 14px;
 }
 
-/***** FAVORI*****/
 .like-checked1, .like-checked2, .like-checked3, .like-checked4 {
   font-size: 22px;
 }
@@ -789,7 +782,6 @@ input[type=checkbox]#like4:checked ~ .like-unchecked4, input[type=checkbox]#like
   -moz-text-fill-color: transparent;
 }
 
-/** heart **/
 input[type=checkbox]#like1, .like-unchecked1, input[type=checkbox]#like1:checked ~ .like-checked1, input[type=checkbox]#like2, .like-unchecked2, input[type=checkbox]#like2:checked ~ .like-checked2, input[type=checkbox]#like3, .like-unchecked3, input[type=checkbox]#like3:checked ~ .like-checked3, input[type=checkbox]#like4, .like-unchecked4, input[type=checkbox]#like4:checked ~ .like-checked4 {
   display: none;
 }
@@ -826,7 +818,6 @@ input[type=checkbox]#like1:checked ~ .like-unchecked1, input[type=checkbox]#like
   }
 }
 
-/** CONTENU **/
 .contenu {
   z-index: 1;
   display: flex;

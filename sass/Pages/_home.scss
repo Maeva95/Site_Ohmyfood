@@ -1,4 +1,4 @@
-/**** LOCAL ****/
+
 .place {
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@
         padding-right: 10px;
     }
 }
-/*** PRESENTATION ***/
+
 
 .presentation {
     display: flex;
@@ -49,7 +49,7 @@
     }
 }
 
-/*** FONCTIONNEMENT ***/
+
 .operation {
     background: $color-white;
     display: flex;
